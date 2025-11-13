@@ -1,0 +1,5 @@
+{
+    "name": "meteor-npm-package",
+    "private": true,
+    "main": "index.js"
+}
