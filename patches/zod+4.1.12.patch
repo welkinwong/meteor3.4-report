@@ -1,0 +1,24 @@
+diff --git a/node_modules/zod/v4/core/util.js b/node_modules/zod/v4/core/util.js
+index 3cf33fd..0fab590 100644
+--- a/node_modules/zod/v4/core/util.js
++++ b/node_modules/zod/v4/core/util.js
+@@ -311,6 +311,19 @@ export const NUMBER_FORMAT_RANGES = {
+     float32: [-3.4028234663852886e38, 3.4028234663852886e38],
+     float64: [-Number.MAX_VALUE, Number.MAX_VALUE],
+ };
++if (typeof BigInt === 'undefined') {
++  console.warn('Defining BigInt proxy for legacy environment...');
++
++  window.BigInt = function (value) {
++    const num = parseInt(value, 10);
++    if (isNaN(num)) {
++      throw new Error(`Cannot convert ${value} to a BigInt`);
++    }
++    return num;
++
++    // return JSBI.BigInt(value);
++  };
++}
+ export const BIGINT_FORMAT_RANGES = {
+     int64: [/* @__PURE__*/ BigInt("-9223372036854775808"), /* @__PURE__*/ BigInt("9223372036854775807")],
+     uint64: [/* @__PURE__*/ BigInt(0), /* @__PURE__*/ BigInt("18446744073709551615")],
