@@ -1,4 +1,6 @@
 const { defineConfig } = require('@meteorjs/rspack');
+const StyleXPlugin = require('@stylexswc/unplugin/rspack');
+const { demoRspackPlugin } = require('./demo-unplugin');
 
 /**
  * Rspack configuration for Meteor projects.
@@ -10,6 +12,16 @@ const { defineConfig } = require('@meteorjs/rspack');
  *
  * Use these flags to adjust your build settings based on environment.
  */
-module.exports = defineConfig(Meteor => {
-  return {};
+module.exports = defineConfig((Meteor) => {
+  return {
+    plugins: [
+      demoRspackPlugin(),
+      StyleXPlugin({
+        useCssPlaceholder: true,
+        rsOptions: {
+          dev: Meteor.isDevelopment,
+        },
+      }),
+    ],
+  };
 });

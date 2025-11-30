@@ -1,0 +1,7 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+/* This will be replaced by the styles created by stylex.create in App.jsx */
+@stylex;
