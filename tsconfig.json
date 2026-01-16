@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true,
+    "checkJs": false,
+    "jsx": "preserve",
+    "incremental": true,
+    "noEmit": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Additional Checks */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module Resolution Options */
+    "baseUrl": ".",
+    "paths": {
+      /* Support absolute /imports/* with a leading '/' */
+      "/*": ["*"],
+      /* Pull in type declarations for Meteor packages from either zodern:types or @types/meteor packages */
+      "meteor/*": [".meteor/local/types/packages.d.ts"]
+    },
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "preserveSymlinks": true,
+
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": [
+    "./.meteor/**",
+    "./packages/**",
+    "node_modules",
+    "**/node_modules",
+    "public",
+    ".vscode",
+    ".deploy",
+    ".cache",
+
+    // Meteor Modern-Tools build context directories
+    "_build",
+    "*/build-assets",
+    "*/build-chunks"
+  ]
+}

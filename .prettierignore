@@ -1,0 +1,5 @@
+.git
+_build
+.github
+.meteor
+node_modules

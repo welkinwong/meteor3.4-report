@@ -8,26 +8,55 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.23.5",
-    "@swc/helpers": "^0.5.17",
-    "meteor-node-stubs": "^1.2.12",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@babel/runtime": "^7.28.6",
+    "@dr.pogodin/react-helmet": "^3.0.5",
+    "@floating-ui/react-dom": "^2.1.6",
+    "@reduxjs/toolkit": "^2.11.2",
+    "@stylexjs/stylex": "^0.17.5",
+    "@swc/helpers": "^0.5.18",
+    "core-js": "^3.47.0",
+    "deepmerge": "^4.3.1",
+    "meteor-node-stubs": "^1.2.24",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.12.0",
+    "rsuite": "^6.1.1"
   },
   "devDependencies": {
-    "@meteorjs/rspack": "^0.1.6",
-    "@rsdoctor/rspack-plugin": "^1.2.3",
-    "@rspack/cli": "^1.6.0",
-    "@rspack/core": "^1.6.0",
-    "@rspack/plugin-react-refresh": "^1.4.3",
-    "react-refresh": "^0.17.0"
+    "@eslint/js": "^9.39.1",
+    "@meteorjs/rspack": "^0.3.56",
+    "@rsdoctor/rspack-plugin": "^1.4.0",
+    "@rspack/cli": "^1.7.1",
+    "@rspack/core": "^1.7.1",
+    "@rspack/plugin-react-refresh": "^1.6.0",
+    "@stylexjs/eslint-plugin": "^0.17.5",
+    "@stylexswc/postcss-plugin": "^0.14.0",
+    "@stylexswc/unplugin": "^0.14.0",
+    "@types/node": "^25.0.7",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "browserslist": "^4.28.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-unused-imports": "^4.3.0",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "postcss-preset-env": "^10.6.1",
+    "prettier": "^3.7.4",
+    "react-refresh": "^0.18.0",
+    "sass": "^1.97.2",
+    "sass-loader": "^16.0.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.0"
   },
   "meteor": {
+    "modern": true,
     "mainModule": {
-      "client": "client/main.jsx",
-      "server": "server/main.js"
-    },
-    "testModule": "tests/main.js",
-    "modern": true
+      "client": "client/Main.tsx",
+      "server": "server/Main.tsx"
+    }
   }
 }

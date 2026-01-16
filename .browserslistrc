@@ -1,0 +1,12 @@
+# es2015
+chrome >= 49
+firefox >= 45
+safari >= 10.1
+
+and_chr >= 49
+and_ff >= 45
+ios_saf >= 10.3
+
+not ie 11
+not op_mini all
+not dead
